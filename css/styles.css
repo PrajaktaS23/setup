@@ -42,3 +42,11 @@ body{
 .navbar-dark{
     background-color: #512DAB;
 }
+
+
+
+.booking{
+    
+    padding: 70px 30px 70px 30px;
+    display: none;
+}
