@@ -18,6 +18,9 @@
 
 <body>
 
+   
+
+
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -31,12 +34,33 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>       
-               
+                 <span class="navbar-text">
+                     <a data-toggle="model" data-target="#loginModel">
+                     <span class="fa fa-sign-in"> Login</span>
+                     </a>
+                 </span>
             </div>
             
         </div>
 
     </nav>
+
+    <div id="loginModel" class="model fade" role="dialog">
+        <div class="model-dialog model-lg" role="content">
+            <div class="model-content">
+                <div class="model-header">
+                    <h4 class="model-title"> Login </h4>
+                    <button type="button" class="close" data-dismis="model"></button>
+                    &times;
+                </div>
+                <div class="model-body">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
 
     
@@ -53,7 +77,9 @@
                 </div> 
                 
                 <div class="col-12 col-sm-3 align-self-center " >
-                    <button class="btn btn-block  btn-warning" onclick="myfunction()" >Reserve Table</button>
+                    <a role="button" class="btn btn-block nav-link btn-warning"
+                    data-toggle="tooltip" data-html="true"  title="Or Call us at +852 12345678"
+                    data-placement="bottom" href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -240,6 +266,10 @@
             x.style.display = "none";
           }
         }
+
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        })
         </script>
 
     
