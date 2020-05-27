@@ -35,7 +35,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>       
                  <span class="navbar-text">
-                     <a data-toggle="model" data-target="#loginModel">
+                     <a data-toggle="modal" data-target="#loginModel">
                      <span class="fa fa-sign-in"> Login</span>
                      </a>
                  </span>
@@ -45,15 +45,17 @@
 
     </nav>
 
-    <div id="loginModel" class="model fade" role="dialog">
-        <div class="model-dialog model-lg" role="content">
-            <div class="model-content">
-                <div class="model-header">
-                    <h4 class="model-title"> Login </h4>
-                    <button type="button" class="close" data-dismis="model"></button>
-                    &times;
+    <div id="loginModel" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Login </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    
                 </div>
-                <div class="model-body">
+                <div class="modal-body">
 
                 </div>
 
@@ -257,26 +259,27 @@
            </div>
         </div>
     </footer>
-    <script>
-        function myfunction() {
-          var x = document.getElementById("book");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
-        }
-
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        })
-        </script>
+    
 
     
 <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    function myfunction() {
+      var x = document.getElementById("book");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+    </script>
 
 
 </script>
